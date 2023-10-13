@@ -12,10 +12,13 @@ public class EnterPuzzle : MonoBehaviour
 
     public GameObject PuzzleCamera;
 
+    public GameObject HiText;
+
     void Start()
     {
         PuzzleCamera.SetActive(false);
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,11 +39,12 @@ public class EnterPuzzle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-                PlayerCam.SetActive(true);
-                PuzzleCamera.SetActive(false);
-                Player.SetActive(true);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+            PlayerCam.SetActive(true);
+            PuzzleCamera.SetActive(false);
+            Player.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            HiText.SetActive(true);
         }
     }
 }
