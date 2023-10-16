@@ -45,9 +45,10 @@ public class Timer : MonoBehaviour
             currentTime -= 1 * Time.deltaTime;
         }
         //currentTime -= 1 * Time.deltaTime;
-        int minutes = Mathf.FloorToInt(currentTime / 60);
-        int seconds = Mathf.FloorToInt(currentTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        //int minutes = Mathf.FloorToInt(currentTime / 60);
+        //int seconds = Mathf.FloorToInt(currentTime % 60);
+        //timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = currentTime.ToString("00:00");
 
         if(Input.GetKey(KeyCode.Escape))
         {

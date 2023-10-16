@@ -1730,7 +1730,6 @@ GameObject:
   - component: {fileID: 793351837}
   - component: {fileID: 793351839}
   - component: {fileID: 793351838}
-  - component: {fileID: 793351840}
   m_Layer: 5
   m_Name: 00
   m_TagString: Untagged
@@ -1854,31 +1853,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793351836}
   m_CullTransparentMesh: 1
---- !u!114 &793351840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793351836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91510ccf4816f2d44bdabe2d9f0c4b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
-  currentTime: 0
-  startingTime: 0
-  WinText: {fileID: 0}
-  Player: {fileID: 0}
-  PuzzleCam: {fileID: 0}
-  TimesUp: {fileID: 0}
-  CharacterTrigger: {fileID: 0}
-  thankYouText: {fileID: 0}
-  HiText: {fileID: 0}
-  PressEText: {fileID: 0}
-  Ball: {fileID: 0}
-  notRunning: 0
 --- !u!1 &803663497
 GameObject:
   m_ObjectHideFlags: 3
@@ -6218,7 +6192,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31898
+  m_Name: pb_Mesh31824
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
