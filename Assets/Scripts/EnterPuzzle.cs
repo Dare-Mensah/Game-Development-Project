@@ -14,30 +14,32 @@ public class EnterPuzzle : MonoBehaviour
 
     public GameObject HiText;
 
+
     void Start()
     {
         PuzzleCamera.SetActive(false);
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
+    //private void OnTriggerEnter(Collider other)
+   // {
+        //if (other.gameObject.tag == "Player")
+        //{
             //PlayerCam.SetActive(false);
-            PuzzleCamera.SetActive(true);
+            //PuzzleCamera.SetActive(true);
             //Player.SetActive(false);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
 
-        }
+        //}
 
 
-    }
+    //}
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
             PlayerCam.SetActive(true);
             PuzzleCamera.SetActive(false);

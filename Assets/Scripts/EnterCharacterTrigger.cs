@@ -16,9 +16,8 @@ public class EnterCharacterTrigger : MonoBehaviour
 
     public GameObject PuzzleObj;
 
-    public GameObject PlayerCam1;
+    public GameObject Player;
 
-    public GameObject PlayerCam2;
 
     public bool Enter;
 
@@ -32,7 +31,7 @@ public class EnterCharacterTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Enter == true && Input.GetKeyDown(KeyCode.E))
+        if (Enter == true && Input.GetKey(KeyCode.E))
         {
             PressEText3.SetActive(false);
             StartText1.SetActive(false);
@@ -43,36 +42,59 @@ public class EnterCharacterTrigger : MonoBehaviour
 
         }
 
-        if (Enter == true && Input.GetKeyDown(KeyCode.F))
+        if (Enter == true && Input.GetKey(KeyCode.F))
         {
             YesText.SetActive(false);
             NoText.SetActive(false);
             MidText2.SetActive(false);
+            //StartCoroutine(WaitForCam());
             PuzzleObj.SetActive(true);
-
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Player.SetActive(false);
+            StartCoroutine(WaitForCharaacter());
 
         }
 
-        if(Enter == true && Input.GetKeyDown(KeyCode.G))
+        if (Enter == true && Input.GetKey(KeyCode.G))
         {
             StartText1.SetActive(true);
             MidText2.SetActive(false);
             YesText.SetActive(false);
             NoText.SetActive(false);
 
+        }
+
+        if (Enter == true)
+        {
+            PressEText3.SetActive(true);
+            StartText1.SetActive(true);
+        }
+
+        if (Enter && MidText2.activeInHierarchy == true &&YesText.activeInHierarchy == true )
+        {
+            PressEText3.SetActive(false);
+            StartText1.SetActive(false);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-       
 
         if(other.gameObject.tag == "Player")
         {
             Enter = true;
-            PressEText3.SetActive(true);
-            StartText1.SetActive(true);
 
         }
     }
+
+    IEnumerator WaitForCharaacter()
+    {
+        yield return new WaitForSeconds(3);
+
+       Player.SetActive(false);
+    }
+
+
+
 }

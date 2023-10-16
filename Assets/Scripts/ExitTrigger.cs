@@ -11,7 +11,6 @@ public class ExitTrigger : MonoBehaviour
 
     public GameObject PuzzleCam;
 
-    public GameObject HiText;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +25,8 @@ public class ExitTrigger : MonoBehaviour
             PlayerCam.SetActive(true);
             PuzzleCam.SetActive(false);
             Player.SetActive(true);
-            HiText.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
         }
     }
